@@ -4,8 +4,7 @@ import pandas as pd
 
 # Laden Sie die Umgebungsvariablen aus der .env-Datei
 load_dotenv()
-# API_KEY = os.environ.get("API_KEY")
-API_KEY = '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'
+API_KEY = os.environ.get("API_KEY")
 
 """## Loaders  
 To use data with an LLM, documents must first be loaded into a vector database.
