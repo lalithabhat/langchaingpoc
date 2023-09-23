@@ -68,6 +68,7 @@ def searchServices(issueDetail):
     """## Loading the database
     Before using the database, it must of course be loaded again.
     """
+    vectoriseTrainingData()
     import pickle
     with open("./rca_vectorstore.pkl", "rb") as f:
         vectorstore = pickle.load(f)
