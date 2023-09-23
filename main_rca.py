@@ -24,8 +24,8 @@ with col2:
     st.dataframe(
         rca_data_df,
         column_config={
-            "Cause": st.column_config.Column(width=150),
-            "Value": st.column_config.Column(width=150)
+            "Cause": st.column_config.Column(width=500),
+            "Value": st.column_config.Column(width=500)
         },
         hide_index=True
     )
