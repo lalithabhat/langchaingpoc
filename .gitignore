@@ -4,3 +4,4 @@ venv
 env
 ./API_Project/app/__pycache__
 **/**/*.pyc
+.history
