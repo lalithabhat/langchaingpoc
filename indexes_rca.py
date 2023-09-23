@@ -69,7 +69,7 @@ def searchServices(issueDetail):
     Before using the database, it must of course be loaded again.
     """
     import pickle
-    with open("rca_vectorstore.pkl", "rb") as f:
+    with open("./rca_vectorstore.pkl", "rb") as f:
         vectorstore = pickle.load(f)
     from langchain.prompts import PromptTemplate
     prompt_template = getPromptOfferingSearch();
