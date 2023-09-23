@@ -104,8 +104,7 @@ def searchServices(issueDetail):
     print(answer)
     print(source)
     return pd.DataFrame({
-        "Cause" : ["Cause Analysis", "Source"],
-        "Value" : [answer, source]
+        "Cause Analyis and Source" : [answer, source]
     })
 
 def getPromptOfferingSearch():

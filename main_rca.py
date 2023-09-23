@@ -3,14 +3,13 @@ import pandas as pd
 import indexes_rca
 st.set_page_config(layout="wide")
 
-col1, col2 = st.columns([3,2])
+col1, col2 = st.columns([2,1])
 
 rca_data_df = pd.DataFrame({
-        "Cause": ["Cause Analysis", "Source"],
-        "Value": ["", ""]
+        "Cause Analyis and Source": ["", ""]
 })
 
-with col1:
+with col2:
     st.title("RCA Tool")
     rca_form = st.text_area("describe your issue here", height=300)
     if st.button("Identity Root Cause and Suggest Preventive Measures"):
@@ -20,13 +19,10 @@ with col1:
         else:
             rca_data_df = indexes_rca.searchServices(rca_form)
 
-with col2:
+with col1:
     st.markdown("<br/>" * 5, unsafe_allow_html=True)  # Creates 5 lines of vertical space
     st.dataframe(
         rca_data_df,
-        column_config={
-            "Cause": st.column_config.Column(width=150),
-            "Value": st.column_config.Column(width=150)
-        },
+        use_container_width= True,
         hide_index=True
     )
